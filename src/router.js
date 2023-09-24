@@ -13,6 +13,13 @@ const router = createRouter({
   routes
 })
 
+router.beforeEach((to, from, next) => {
+  if (to.path === '/') { 
+    console.log("//////////");
+  }
+  next()
+})
+
 export default router
 
 

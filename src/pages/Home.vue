@@ -29,7 +29,7 @@
 
 <script setup>
 import { onMounted, reactive } from "vue"
-import { useRouter } from "vue-router"
+import { useRouter, useRoute } from "vue-router"
 import axios from "axios"
 import Issue from "../components/Issue.vue"
 import Flower from "../components/Flower.vue"
@@ -40,6 +40,10 @@ const issues = reactive({
 })
 
 const router = useRouter()
+const route = useRoute()
+
+console.log("route========>", route)
+
 const toNew = () => {
   router.push("/new")
 }

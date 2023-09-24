@@ -19,11 +19,11 @@
       </template>
     </el-input>
     <el-dropdown class="ml-64">
-      <el-avatar> user </el-avatar>
+      <el-avatar class="w-9 h-9">{{ route.query.un }}</el-avatar>
       <template #dropdown>
         <el-dropdown-menu>
-          <el-dropdown-item>退出登陆</el-dropdown-item>
-          <el-dropdown-item>去登陆</el-dropdown-item>
+          <el-dropdown-item>个人信息</el-dropdown-item>
+          <el-dropdown-item @click="toLogin">退出登录</el-dropdown-item>
         </el-dropdown-menu>
       </template>
     </el-dropdown>
@@ -32,6 +32,13 @@
 
 <script setup>
 import {} from "vue"
+import { useRouter, useRoute } from "vue-router"
 import { Search } from "@element-plus/icons-vue"
+
+const route = useRoute()
+const router = useRouter()
+const toLogin = () => {
+  router.push("/")
+}
 </script>
 <style scoped></style>

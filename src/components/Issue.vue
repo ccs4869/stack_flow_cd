@@ -2,7 +2,7 @@
   <div
     class="issue-container p-4 w-[100%] h-[146px] border-b-[1px] border-gray-400 text-[14px]"
   >
-    <p class="h-[30px] cursor-pointer hover:text-blue-500 text-[16px]" @click="toDetail">
+    <p class="h-[30px] cursor-pointer text-blue-500 hover:text-blue-700 text-[16px]" @click="toDetail">
       <el-tag class="ml-8" type="info">0 votes</el-tag>
       <span class="ml-4">{{ title }}</span>
     </p>
